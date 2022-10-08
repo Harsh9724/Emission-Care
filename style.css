@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@1,300&display=swap');
 
 *{
     margin: 0;
@@ -10,9 +10,9 @@
 
 :root{
     --body-color: #464545;
-    --nav-color: #8c0940;
+    --nav-color: #238b2d;
     --side-nav: #010718;
-    --text-color: rgb(0, 0, 0);
+    --text-color: rgb(255, 255, 255);
     --search-bar: #F2F2F2;
     --search-text: #010718;
 }
@@ -138,17 +138,17 @@ nav .nav-bar .logo a{
     transition: all 0.3s ease;
 }
 
-.dark-light i.sun{
+.dark-light i.bright{
     opacity: 0;
     pointer-events: none;
 }
 
-.dark-light.active i.sun{
+.dark-light.active i.bright{
     opacity: 1;
     pointer-events: auto;
 }
 
-.dark-light.active i.moon{
+.dark-light.active i.half{
     opacity: 0;
     pointer-events: none;
 }
@@ -286,3 +286,5 @@ body.dark .search-field i{
         margin-top: 20px;
     }
 }
+
+
