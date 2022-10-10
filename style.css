@@ -291,14 +291,16 @@ body.dark .search-field i{
 }
 
 .box{
+    position: fixed;
+    top: 0;
     height: 100vh;
     width: 100%;
-    margin: auto;
-    /* margin-top: 69px; */
-/* --mask:
+    /* margin: auto;    */
+--mask:
       radial-gradient(77.69px at 50% calc(100% + 66.60px),rgba(216, 213, 213, 0) calc(99% - 3px),#000 calc(101% - 3px) 99%,#0000 101%) calc(50% - 74px) calc(50% - 20px + .5px)/148px 40px ,
       radial-gradient(77.69px at 50% -66.6px,#0000 calc(99% - 3px),#000 calc(101% - 3px) 99%,#0000 101%) 50% calc(50% + 20px)/148px 40px ;
       -webkit-mask: var(--mask);
-            mask: var(--mask); */
-    background-color: blue;
+            mask: var(--mask);
+    background-color: #000;
+    z-index: -100;
 }
