@@ -17,10 +17,13 @@
     --search-text: #010718;
 }
 
-body{
-    height: 100vh;
-    background-color: var(--body-color);
-}
+/* body{
+    height: 100%;
+    
+} */
+
+
+
 
 body.dark{
     --body-color: #18191A;
@@ -97,15 +100,15 @@ nav .nav-bar .logo a{
 }
 
 .nav-links li a::before{
-    content: '';
+    content: '..';
     position: absolute;
-    left: 50%;
-    bottom: 0;
+    left: 45%;
+    bottom: 50%;
     transform: translateX(-50%);
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    background-color: var(--text-color);
+    height: 0px;
+    width: 0px;
+    border-radius: none;
+    color: crimson;
     opacity: 0;
     transition: all 0.3s ease;
 }
@@ -287,4 +290,15 @@ body.dark .search-field i{
     }
 }
 
-
+.box{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+--mask:
+      radial-gradient(77.69px at 50% calc(100% + 66.60px),rgba(216, 213, 213, 0) calc(99% - 3px),#000 calc(101% - 3px) 99%,#0000 101%) calc(50% - 74px) calc(50% - 20px + .5px)/148px 40px ,
+      radial-gradient(77.69px at 50% -66.6px,#0000 calc(99% - 3px),#000 calc(101% - 3px) 99%,#0000 101%) 50% calc(50% + 20px)/148px 40px ;
+      -webkit-mask: var(--mask);
+            mask: var(--mask);
+    background-color: blue;
+}
