@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@1,300&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    transition: all 0.4s ease;;
+    transition: all 0.4s ease;
+    ;
 }
 
-:root{
+:root {
     --body-color: #464545;
     --nav-color: #238b2d;
     --side-nav: #010718;
@@ -17,15 +18,14 @@
     --search-text: #010718;
 }
 
-/* body{
+body {
     height: 100%;
-    
-} */
+}
 
 
 
 
-body.dark{
+body.dark {
     --body-color: #18191A;
     --nav-color: #242526;
     --side-nav: #242526;
@@ -33,22 +33,22 @@ body.dark{
     --search-bar: #242526;
 }
 
-nav{
-    position: sticky;
+nav {
+    position: fixed;
     top: 0;
     left: 0;
     height: 70px;
     width: 100%;
     background-color: var(--nav-color);
-    /* z-index: 100; */
+    z-index: 100;
 }
 
-body.dark nav{
+body.dark nav {
     border: 1px solid #393838;
 
 }
 
-nav .nav-bar{
+nav .nav-bar {
     position: relative;
     height: 100%;
     max-width: 1000px;
@@ -61,7 +61,7 @@ nav .nav-bar{
     justify-content: space-between;
 }
 
-nav .nav-bar .sidebarOpen{
+nav .nav-bar .sidebarOpen {
     color: var(--text-color);
     font-size: 25px;
     padding: 5px;
@@ -69,28 +69,28 @@ nav .nav-bar .sidebarOpen{
     display: none;
 }
 
-nav .nav-bar .logo a{
+nav .nav-bar .logo a {
     font-size: 25px;
     font-weight: 500;
     color: var(--text-color);
     text-decoration: none;
 }
 
-.menu .logo-toggle{
+.menu .logo-toggle {
     display: none;
 }
 
-.nav-bar .nav-links{
+.nav-bar .nav-links {
     display: flex;
     align-items: center;
 }
 
-.nav-bar .nav-links li{
+.nav-bar .nav-links li {
     margin: 0 5px;
     list-style: none;
 }
 
-.nav-links li a{
+.nav-links li a {
     position: relative;
     font-size: 17px;
     font-weight: 400;
@@ -99,7 +99,7 @@ nav .nav-bar .logo a{
     padding: 11px;
 }
 
-.nav-links li a::before{
+.nav-links li a::before {
     content: '..';
     position: absolute;
     left: 45%;
@@ -113,17 +113,17 @@ nav .nav-bar .logo a{
     transition: all 0.3s ease;
 }
 
-.nav-links li:hover a::before{
+.nav-links li:hover a::before {
     opacity: 1;
 }
 
-.nav-bar .darkLight-searchBox{
+.nav-bar .darkLight-searchBox {
     display: flex;
     align-items: center;
 }
 
 .darkLight-searchBox .dark-light,
-.darkLight-searchBox .searchToggle{
+.darkLight-searchBox .searchToggle {
     height: 40px;
     width: 40px;
     display: flex;
@@ -133,7 +133,7 @@ nav .nav-bar .logo a{
 }
 
 .dark-light i,
-.searchToggle i{
+.searchToggle i {
     position: absolute;
     color: var(--text-color);
     font-size: 22px;
@@ -141,41 +141,41 @@ nav .nav-bar .logo a{
     transition: all 0.3s ease;
 }
 
-.dark-light i.bright{
+.dark-light i.bright {
     opacity: 0;
     pointer-events: none;
 }
 
-.dark-light.active i.bright{
+.dark-light.active i.bright {
     opacity: 1;
     pointer-events: auto;
 }
 
-.dark-light.active i.half{
+.dark-light.active i.half {
     opacity: 0;
     pointer-events: none;
 }
 
-.searchToggle i.cancel{
+.searchToggle i.cancel {
     opacity: 0;
     pointer-events: none;
 }
 
-.searchToggle.active i.cancel{
+.searchToggle.active i.cancel {
     opacity: 1;
     pointer-events: auto;
 }
 
-.searchToggle.active i.search{
+.searchToggle.active i.search {
     opacity: 0;
     pointer-events: none;
 }
 
-.searchBox{
+.searchBox {
     position: relative;
 }
 
-.searchBox .search-field{
+.searchBox .search-field {
     position: absolute;
     bottom: -85px;
     right: 5px;
@@ -192,13 +192,13 @@ nav .nav-bar .logo a{
     transition: all 0.3s ease;
 }
 
-.searchToggle.active ~ .search-field{
+.searchToggle.active~.search-field {
     bottom: -74px;
     opacity: 1;
     pointer-events: auto;
 }
 
-.search-field::before{
+.search-field::before {
     content: '';
     position: absolute;
     right: 14px;
@@ -210,7 +210,7 @@ nav .nav-bar .logo a{
     z-index: -1;
 }
 
-.search-field input{
+.search-field input {
     height: 100%;
     width: 100%;
     padding: 0 45px 0 15px;
@@ -223,11 +223,11 @@ nav .nav-bar .logo a{
     background-color: var(--search-bar);
 }
 
-body.dark .search-field input{
+body.dark .search-field input {
     color: var(--text-color);
 }
 
-.search-field i{
+.search-field i {
     position: absolute;
     color: var(--nav-color);
     right: 15px;
@@ -235,16 +235,16 @@ body.dark .search-field input{
     cursor: pointer;
 }
 
-body.dark .search-field i{
+body.dark .search-field i {
     color: var(--text-color);
 }
 
 @media (max-width: 790px) {
-    nav .nav-bar .sidebarOpen{
+    nav .nav-bar .sidebarOpen {
         display: block;
     }
 
-    .menu{
+    .menu {
         position: fixed;
         height: 100%;
         width: 320px;
@@ -256,16 +256,16 @@ body.dark .search-field i{
         transition: all 0.4s ease;
     }
 
-    nav.active .menu{
+    nav.active .menu {
         left: -0%;
     }
 
-    nav.active .nav-bar .navLogo a{
+    nav.active .nav-bar .navLogo a {
         opacity: 0;
         transition: all 0.3s ease;
     }
 
-    .menu .logo-toggle{
+    .menu .logo-toggle {
         display: block;
         width: 100%;
         display: flex;
@@ -273,32 +273,19 @@ body.dark .search-field i{
         justify-content: space-between;
     }
 
-    .logo-toggle .siderbarClose{
+    .logo-toggle .siderbarClose {
         color: var(--text-color);
         font-size: 24px;
         cursor: pointer;
     }
 
-    .nav-bar .nav-links{
+    .nav-bar .nav-links {
         flex-direction: column;
         padding-top: 30px;
     }
 
-    .nav-links li a{
+    .nav-links li a {
         display: block;
         margin-top: 20px;
     }
-}
-
-.box{
-    height: 100vh;
-    width: 100%;
-    margin: auto;
-    /* margin-top: 69px; */
-/* --mask:
-      radial-gradient(77.69px at 50% calc(100% + 66.60px),rgba(216, 213, 213, 0) calc(99% - 3px),#000 calc(101% - 3px) 99%,#0000 101%) calc(50% - 74px) calc(50% - 20px + .5px)/148px 40px ,
-      radial-gradient(77.69px at 50% -66.6px,#0000 calc(99% - 3px),#000 calc(101% - 3px) 99%,#0000 101%) 50% calc(50% + 20px)/148px 40px ;
-      -webkit-mask: var(--mask);
-            mask: var(--mask); */
-    background-color: blue;
 }
